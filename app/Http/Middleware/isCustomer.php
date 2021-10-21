@@ -30,11 +30,13 @@ class isCustomer
 
             }else if(Auth::user()->type == 'admin') {
 
-                return redirect('/admin/');
+                return redirect('/admin/dashboard');
 
             }else {
 
-                return redirect('/');
+                Auth::logout();
+                Session::flash('alert-warning', 'Not logged-in');
+                return redirect('/login');
 
             }
         }else {

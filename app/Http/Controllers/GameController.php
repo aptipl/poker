@@ -43,7 +43,7 @@ class GameController extends Controller
 
         $game = $this->gameService->create($request);
 
-        return redirect('games.index')->with('success', 'Game created successfully');
+        return redirect()->route('games.show', $game->id)->with('success', 'Game created successfully');
     }
 
     /**

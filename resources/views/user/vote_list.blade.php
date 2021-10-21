@@ -17,7 +17,7 @@
                         <th>#</th>
                         <th>Game Code</th>
                         <th>Card Selected</th>
-                        <th>Date</th>
+                        <th>Vote Date</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -26,6 +26,7 @@
                         <th>Cards</th>
                         <th>Participants</th>
                         <th>Share URL</th>
+                        <th>Created Date</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -38,6 +39,7 @@
                             <th>{{ $game->number }}</th>
                             <th>{{ $game->votes()->count() }}</th>
                             <th>{{ $game->shareURL() }}</th>
+                            <th>{{ \Carbon\Carbon::parse($game->created_at)->format('jS M Y')}}</th>
                             <th>
                                 <div class="flex align-items-center list-user-action">
                                     <form method="POST" class="d-inline" id="delete-{{ $game->id }}" action="{{ route('games.destroy', $game) }}">

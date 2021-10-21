@@ -40,6 +40,7 @@ Route::group([
     'middleware' => ['web', 'auth', 'is_admin', 'verified']
 ], function () {
     Route::get('/', [GameController::class, 'index']);
+    Route::get('/dashboard', [GameController::class, 'index']);
     Route::resource('/games', GameController::class);
     Route::resource('/users', UserController::class);
 });

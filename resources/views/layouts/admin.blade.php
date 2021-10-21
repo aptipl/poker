@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="{{ asset('admin/css/responsive.css') }}">
+    @yield('css')
 </head>
 <body>
 <!-- loader Start -->
@@ -110,7 +111,8 @@
     <div id="content-page" class="content-page">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-12">
+                @yield('game-card')
+                <div class="col-sm-12 mt-lg-5">
                     @if ($errors->any())
                         <div class="alert text-white bg-primary" role="alert">
                             <div class="iq-alert-text">
